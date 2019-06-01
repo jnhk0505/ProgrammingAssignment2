@@ -32,3 +32,10 @@ cacheSolve <- function(x, ...) {
   x$setInverse(inv)
   inv
 }
+
+## checking if above works
+a<- makeCacheMatrix(matrix(c(2,4,6,3,1,2,3,4,9),3,3))
+a$get()
+a$getInverse()
+cacheSolve(a)
+cacheSolve(a) ## since the matrix does not change, "getting cached data" message appears 
